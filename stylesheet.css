@@ -96,7 +96,7 @@ table{
         margin: 5px;
         border-radius: 200px;
 }
-.button, .upload {
+.button {
     background:rgb(175, 150, 233);
     font-family:'Handlee', cursive;
     font-size:20px;
