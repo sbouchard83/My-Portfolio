@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, heitht=device-height, inital-scale=1.0">
+        <title>Contact Me</title>
+        <link rel="stylesheet" href="stylesheet.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredoka+One&family=Handlee&family=Titillium+Web:wght@900&display=swap" rel="stylesheet">  
+    </head>
+
+    <script>
+    window.onload = function()
+    {
+        var form_ref= document.getElementById("form_ref");
+        form_ref.onsubmit = function()
+        {
+            var radio_options = form_ref.option;
+            for(var i = 0; i < radio_options.length; i++)
+            {
+                if(radio_options[hiring].checked)
+                {
+                    "Enter an hourly rate: "
+             
+            }
+            return false;
+             
+        }
+
+    }
+
+    </script>
+
+    <body id="contact">
+
+        <form id="form_ref" action="http://httpbin.org/post" method="POST"> 
+
+        <label for="firstname">Name:</label>
+        <input type="text" name="name" id="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" name="address" id="address" required><br><br>
+
+
+        
+       <label for="city">City:</label>
+        <input type="text" list="cities" name="city" id="city" required><br><br>
+        <datalist id="cities">
+            <option value="Toronto">
+            <option value="Montreal">
+            <option value="Calgary">
+            <option value="Ottawa">
+            <option value="Edmonton">
+            <option value="Mississauga">
+            <option value="Winnipeg">
+            <option value="Vancouver">
+            <option value="Brampton">
+            <option value="Hamilton">
+            <option value="Quebec City">
+            <option value="Halifax">          
+        </datalist>
+
+        <label for="postalcode">Postal Code:</label>
+        <input type="text" name="postalcode" id="postalcode" placeholder="A1B 2C3" pattern="[A-Za-z]\d[A-za-z]\s?\d[A-Za-z]\d" required><br><br><br><br>
+
+        <fieldset class="fieldcontainer">
+            <legend class="fieldcontainer" required>Please indicate reason for contact</legend>
+    
+            <input class="fieldcontainer" type="radio" name="option" id="question" value="question">
+            <label class="fieldcontainer" for="question">Question</label>
+            
+
+            <input class="fieldcontainer" type="radio" name="option" id="comment" value="comment">
+            <label class="fieldcontainer" for="comment">Comment</label>
+            
+           
+            <input class="fieldcontainer" type="radio" name="option" id="hiring" value="hiring">
+            <label class="fieldcontainer" for="hiring">Hiring</label>
+            
+         
+        </fieldset><br><br><br>
+
+        <textarea id="message" name="message"  rows="20" dir="ltr" warp="soft" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false" ></textarea>
+       
+
+
+        <input value="Simone Bouchard 131 541 153" name="value" type="hidden">    
+
+        <input id="submit" type="submit" value="submit">
+
+
+        </form>
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+</html>
